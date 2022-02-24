@@ -11,14 +11,14 @@ class Queue {
     enqueue(node) {
       this.itemQueue[this.tailIndex] = node;
       this.tailIndex += 1;
-      this.length++;
+      this.length += 1;
     }
 
     dequeue() {
       const toReturn = this.itemQueue[this.headIndex];
       delete this.itemQueue[this.headIndex];
       this.headIndex += 1;
-      this.length--;
+      this.length -= 1;
       return toReturn;
     }
 
